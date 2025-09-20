@@ -1,36 +1,95 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+-Sistema de agenda de citas para una Estetica-
+<img width="1920" height="967" alt="image" src="https://github.com/user-attachments/assets/ac432928-c067-4808-a0b3-726e29ac1225" />
 
-## Getting Started
 
-First, run the development server:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+o  Descripción
+Sistema Estética es una aplicación web diseñada para optimizar la gestión de tiempo en citas para  nuestra estética. Desarrollada con tecnologías modernas como Next.js, ofrece una interfaz intuitiva y funcionalidades completas para administrar clientes, servicios, citas asi como la comodidad tanto para clientes como para nuestro negocio.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+o  Características Principales
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+Gestión de Clientes: Registro y seguimiento completo de clientes
+Agenda Digital: Sistema de agenda de citas 
+Servicios: Administración de tratamientos y precios
+Panel de Control: Dashboard con métricas y estadísticas en tiempo real
+Gestión de Personal: Control de empleados y especialistas
+Diseño Responsivo: Optimizado para dispositivos móviles y desktop
+Interfaz Moderna: UI/UX diseñada pensando en la experiencia del usuario
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+o  Tecnologías Utilizadas
 
-## Learn More
+Frontend: Next.js con App Router
+Framework: React 
+Lenguaje: JavaScript
+Estilos: CSS Modules / Tailwind CSS
+Font: Geist
 
-To learn more about Next.js, take a look at the following resources:
+o Instalación
+Prerrequisitos
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Node.js 18.0 
+npm, yarn, pnpm o bun
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+-Pasos de instalación
 
-## Deploy on Vercel
+Clona el repositorio
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+bash   git clone https://github.com/Budhanks/Sistema-Estetica.git
+   cd Sistema-Estetica
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Instala las dependencias
+
+bash   npm install
+   # o
+   yarn install
+   # o
+   pnpm install
+
+Inicia el servidor de desarrollo
+
+bash   npm run dev
+   # o
+   yarn dev
+   # o
+   pnpm dev
+   # o
+   bun dev
+
+Abre tu navegador
+Visita http://localhost:3000 para ver la aplicación en funcionamiento.
+
+o  Uso
+Desarrollo
+Para comenzar a desarrollar, simplemente modifica los archivos en la carpeta app/. La aplicación se recargará automáticamente con los cambios.
+Estructura del Proyecto
+Sistema-Estetica/
+├── app/                 # App Router de Next.js
+├── components/          # Componentes reutilizables
+├── public/             # Archivos estáticos
+├── styles/             # Estilos globales
+└── ...
+
+o Contribuir
+Las contribuciones son bienvenidas. Para contribuir:
+
+Haz un Fork del proyecto
+Crea una rama para tu feature (git checkout -b feature/AmazingFeature)
+Commit tus cambios (git commit -m 'Add some AmazingFeature')
+Push a la rama (git push origin feature/AmazingFeature)
+Abre un Pull Request
+
+o Recursos de Aprendizaje
+
+Documentación de Next.js 
+Tutorial de Next.js
+Repositorio de Next.js
+
+o Despliegue
+La forma más fácil de desplegar tu aplicación Next.js es usar la plataforma Vercel de los creadores de Next.js.
+Consulta la documentación de despliegue de Next.js para más detalles.
+o Licencia
+Este proyecto está bajo la Licencia MIT. Consulta el archivo LICENSE para más detalles.
+o Autor
+Budhanks
+
+GitHub: @Budhanks
