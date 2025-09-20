@@ -18,7 +18,10 @@ export async function GET(request) {
     const token = authHeader.split(' ')[1];
     
     try {
-      const decoded = jwt.verify(token, process.env.JWT_SECRET || 'mi-secreto-estetica-citas-2024');
+      const decoded = jwt.verify(
+        token, 
+        process.env.JWT_SECRET || 'mi-secreto-estetica-citas-2024'
+      );
       
       if (decoded.rol !== 'admin') {
         return NextResponse.json(
@@ -45,7 +48,7 @@ export async function GET(request) {
 
     return NextResponse.json({
       success: true,
-      clientes: clientes,ls -la | grep git
+      clientes: clientes,
       total: clientes.length
     });
 
