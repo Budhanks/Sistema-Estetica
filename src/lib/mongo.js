@@ -1,4 +1,3 @@
-// src/lib/mongo.js - VERSIÓN FINAL CORRECTA
 import { MongoClient } from 'mongodb';
 
 if (!process.env.MONGODB_URI) {
@@ -12,14 +11,12 @@ let client;
 let clientPromise;
 
 if (process.env.NODE_ENV === 'development') {
-  // En desarrollo, usa una instancia global para evitar múltiples conexiones
   if (!global._mongoClientPromise) {
     client = new MongoClient(uri, options);
     global._mongoClientPromise = client.connect();
   }
   clientPromise = global._mongoClientPromise;
 } else {
-  // En producción, crea una nueva conexión
   client = new MongoClient(uri, options);
   clientPromise = client.connect();
 }

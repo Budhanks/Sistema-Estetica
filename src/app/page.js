@@ -1,3 +1,6 @@
+import Link from 'next/link';
+import Image from 'next/image';
+
 export default function Home() {
   return (
     <div className="estetica-home">
@@ -5,8 +8,8 @@ export default function Home() {
       <header className="header">
         <h1>✨ Alice Fashion ✨</h1>
         <nav>
-          <a href="/">Inicio</a>
-          <a href="/cuenta">Agendar Cita</a>
+          <Link href="/">Inicio</Link>
+          <Link href="/cuenta">Agendar Cita</Link>
         </nav>
       </header>
 
@@ -18,21 +21,21 @@ export default function Home() {
           Ofrecemos servicios de calidad para realzar tu belleza natural.
         </p>
         
-        <a href="/cuenta" className="cta-button">
+        <Link href="/cuenta" className="cta-button">
           ¡Agenda tu cita Ahora!
-        </a>
+        </Link>
       </section>
 
       {/* Servicios disponibles */}
       <section className="servicios-grid">
         <div className="servicio-card">
           <div className="servicio-icon">
-            <img 
+            <Image 
               src="/Cortes.jpg" 
               alt="Cortes y Peinados" 
+              width={60}
+              height={60}
               style={{ 
-                width: '60px', 
-                height: '60px', 
                 objectFit: 'cover', 
                 borderRadius: '50%' 
               }} 
@@ -44,12 +47,12 @@ export default function Home() {
 
         <div className="servicio-card">
           <div className="servicio-icon">
-            <img 
+            <Image 
               src="/Tintes.jpg" 
               alt="Tintes y Color" 
+              width={60}
+              height={60}
               style={{ 
-                width: '60px', 
-                height: '60px', 
                 objectFit: 'cover', 
                 borderRadius: '50%' 
               }} 
@@ -61,12 +64,12 @@ export default function Home() {
 
         <div className="servicio-card">
           <div className="servicio-icon">
-            <img 
+            <Image 
               src="/Manicure.jpg" 
               alt="Manicure y Pedicure" 
+              width={60}
+              height={60}
               style={{ 
-                width: '60px', 
-                height: '60px', 
                 objectFit: 'cover', 
                 borderRadius: '50%' 
               }} 
@@ -78,12 +81,12 @@ export default function Home() {
 
         <div className="servicio-card">
           <div className="servicio-icon">
-            <img 
+            <Image 
               src="/Tratamiento_facial.webp" 
               alt="Tratamientos Faciales" 
+              width={60}
+              height={60}
               style={{ 
-                width: '60px', 
-                height: '60px', 
                 objectFit: 'cover', 
                 borderRadius: '50%' 
               }} 
@@ -95,12 +98,12 @@ export default function Home() {
 
         <div className="servicio-card">
           <div className="servicio-icon">
-            <img 
+            <Image 
               src="/pestañas.jpg" 
               alt="Cejas y Pestañas" 
+              width={60}
+              height={60}
               style={{ 
-                width: '60px', 
-                height: '60px', 
                 objectFit: 'cover', 
                 borderRadius: '50%' 
               }} 
@@ -112,12 +115,12 @@ export default function Home() {
 
         <div className="servicio-card">
           <div className="servicio-icon">
-            <img 
+            <Image 
               src="/Servicios_especiales.jpg" 
               alt="Servicios Especiales" 
+              width={60}
+              height={60}
               style={{ 
-                width: '60px', 
-                height: '60px', 
                 objectFit: 'cover', 
                 borderRadius: '50%' 
               }} 

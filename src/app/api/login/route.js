@@ -1,4 +1,3 @@
-// src/app/api/login/route.js - Driver nativo MongoDB
 import clientPromise from '@/lib/mongo';
 import bcrypt from 'bcryptjs';
 import jwt from 'jsonwebtoken';
@@ -18,11 +17,9 @@ export async function POST(request) {
       );
     }
 
-    // Buscar en usuarios normales
     let user = await db.collection('users').findOne({ email });
     let isAdmin = false;
 
-    // Si no es usuario normal, buscar en admins
     if (!user) {
       user = await db.collection('admins').findOne({ email });
       isAdmin = true;
@@ -35,7 +32,6 @@ export async function POST(request) {
       );
     }
 
-    // Verificar contraseña
     const isValid = await bcrypt.compare(password, user.password);
     if (!isValid) {
       return NextResponse.json(
@@ -44,7 +40,6 @@ export async function POST(request) {
       );
     }
 
-    // Crear token JWT
     const token = jwt.sign(
       { 
         userId: user._id, 

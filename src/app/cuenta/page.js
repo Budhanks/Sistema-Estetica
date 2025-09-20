@@ -1,8 +1,11 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 
 export default function Cuenta() {
+  const router = useRouter();
   const [activeTab, setActiveTab] = useState('register');
   const [loginData, setLoginData] = useState({ email: '', password: '' });
   const [registerData, setRegisterData] = useState({
@@ -16,6 +19,11 @@ export default function Cuenta() {
   const [error, setError] = useState('');
   const [success, setSuccess] = useState('');
   const [loading, setLoading] = useState(false);
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   const handleLoginChange = (e) => {
     setLoginData({ ...loginData, [e.target.name]: e.target.value });
@@ -40,13 +48,15 @@ export default function Cuenta() {
       const data = await response.json();
 
       if (data.success) {
-        localStorage.setItem('token', data.token);
-        localStorage.setItem('user', JSON.stringify(data.user));
+        if (mounted && typeof window !== 'undefined') {
+          localStorage.setItem('token', data.token);
+          localStorage.setItem('user', JSON.stringify(data.user));
+        }
         
         if (data.user.rol === 'admin') {
-          window.location.href = '/admin/dashboard';
+          router.push('/admin/dashboard');
         } else {
-          window.location.href = '/cliente/dashboard';
+          router.push('/cliente/dashboard');
         }
       } else {
         setError(data.message);
@@ -115,8 +125,8 @@ export default function Cuenta() {
       <header className="header">
         <h1>✨ Alice Fashion ✨</h1>
         <nav>
-          <a href="/">Inicio</a>
-          <a href="/cuenta" className="active">Agendar Cita</a>
+          <Link href="/">Inicio</Link>
+          <Link href="/cuenta" className="active">Agendar Cita</Link>
         </nav>
       </header>
 

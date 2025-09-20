@@ -1,4 +1,3 @@
-// src/app/api/register/route.js - Driver nativo MongoDB
 import clientPromise from '@/lib/mongo';
 import bcrypt from 'bcryptjs';
 import { NextResponse } from 'next/server';
@@ -17,7 +16,6 @@ export async function POST(request) {
       );
     }
 
-    // Verificar si el email ya existe
     const existingUser = await db.collection('users').findOne({ email });
     if (existingUser) {
       return NextResponse.json(
@@ -26,7 +24,6 @@ export async function POST(request) {
       );
     }
 
-    // Crear usuario
     const hashedPassword = await bcrypt.hash(password, 10);
     
     const newUser = {

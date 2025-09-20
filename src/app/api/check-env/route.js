@@ -1,4 +1,3 @@
-// app/api/check-env/route.js
 import { NextResponse } from 'next/server';
 
 export async function GET() {
